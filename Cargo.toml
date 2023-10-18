@@ -1,0 +1,14 @@
+[package]
+name = "dioxus-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "*" }
+dioxus-fullstack = { version = "*" }
+tokio = { version = "1", optional = true }
+
+[features]
+default = []
+ssr = ["dioxus-fullstack/axum", "tokio"]
+web = ["dioxus-fullstack/web"]
